@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LUXE. — Modern, architectural, and luxury furniture design for elevated contemporary spaces. Handcrafted in Italy with sustainable materials.">
+  <title>LUXE. — Modern Luxury Furniture & Architectural Interiors</title>
+
+  <!-- Luxury Monogram Favicon (Champagne Gold on Obsidian) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23111111'/><rect x='5' y='5' width='90' height='90' rx='18' fill='none' stroke='%23C9A96E' stroke-width='2.5' opacity='0.6'/><text x='38' y='68' font-family='serif' font-size='54' font-weight='600' fill='%23C9A96E'>L</text><circle cx='68' cy='65' r='5' fill='%23C9A96E'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Main Luxury Stylesheet -->
+  <link rel="stylesheet" href="style (1).css">
+</head>
+<body>
+
+  <!-- ==================== SITE HEADER / NAVIGATION ==================== -->
+  <header class="site-header" id="site-header">
+    <div class="container navbar">
+      <!-- Logo -->
+      <a href="#hero" class="brand-logo" id="nav-brand-logo">
+        LUXE<span class="dot">.</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" id="desktop-nav">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#catalog" class="nav-link">Shop</a>
+        <a href="#categories" class="nav-link">Collections</a>
+        <a href="#catalog" class="nav-link">All Products</a>
+        <a href="#new-arrivals" class="nav-link">New Arrivals</a>
+        <a href="#about" class="nav-link">About</a>
+      </nav>
+
+      <!-- Right Action Icons -->
+      <div class="nav-actions">
+        <button class="nav-action-btn" id="search-open-btn" aria-label="Search luxury products">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="nav-action-btn" id="wishlist-btn" aria-label="View Wishlist" aria-expanded="false">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count" id="wishlist-badge">0</span>
+        </button>
+        <button class="nav-action-btn" id="cart-open-btn" aria-label="Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge-count" id="cart-badge">2</span>
+        </button>
+        <button class="nav-action-btn" id="tracking-open-btn" aria-label="Track an order" title="Track an order">
+          <i class="fa-solid fa-location-dot"></i>
+        </button>
+        
+        <!-- Interactive User Profile & Auth Trigger -->
+        <div class="nav-user-wrap" id="nav-user-wrap">
+          <button class="nav-action-btn" id="user-btn" aria-label="User Account">
+            <i class="fa-regular fa-user"></i>
+          </button>
+          <!-- Logged-in Dropdown Menu -->
+          <div class="user-dropdown-menu" id="user-dropdown-menu">
+            <div class="user-dropdown-header">
+              <div class="user-dropdown-name" id="dropdown-user-name">Julian Sterling</div>
+              <div class="user-dropdown-tier"><i class="fa-solid fa-crown text-gold"></i> VIP Private Atelier Client</div>
+            </div>
+            <div class="user-profile-summary" id="user-profile-summary">
+              <div><i class="fa-solid fa-envelope"></i><span id="dropdown-user-email">No email saved</span></div>
+              <div><i class="fa-solid fa-house"></i><span id="dropdown-user-address">Add a delivery address at checkout</span></div>
+            </div>
+            <button class="user-dropdown-link profile-edit-toggle" id="profile-edit-toggle" type="button"><i class="fa-solid fa-pen"></i> Edit Client Profile</button>
+            <form class="profile-edit-form" id="profile-edit-form">
+              <label for="profile-address">Home address</label>
+              <input class="auth-input" id="profile-address" type="text" placeholder="Home or delivery address">
+              <label for="profile-state">State</label>
+              <input class="auth-input" id="profile-state" type="text" placeholder="State / region">
+              <label for="profile-phone">Phone</label>
+              <input class="auth-input" id="profile-phone" type="tel" placeholder="Phone number">
+              <button class="btn btn-primary profile-save-btn" type="submit">Save Profile</button>
+            </form>
+            <button class="user-dropdown-link user-order-link" id="user-order-tracker-btn" type="button"><i class="fa-solid fa-location-dot"></i> <span id="user-order-tracker-label">Track Latest Order</span></button>
+            <div class="user-dropdown-link"><i class="fa-solid fa-box"></i> Private Orders (2 Active)</div>
+            <div class="user-dropdown-link"><i class="fa-solid fa-compass-drafting"></i> Bespoke Consultations</div>
+            <div class="user-dropdown-link"><i class="fa-solid fa-truck-ramp-box"></i> White-Glove Addresses</div>
+            <a class="user-dropdown-link customer-care-link" href="mailto:concierge@luxe-interiors.com"><i class="fa-solid fa-headset"></i> Customer Care</a>
+            <div class="user-dropdown-link signout" id="user-signout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-Out Drawer -->
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <div class="brand-logo">LUXE<span class="dot">.</span></div>
+      <button class="mobile-close-btn" id="mobile-close-btn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav class="mobile-links">
+      <a href="#hero" class="mobile-link"><span>Home</span> <span class="mobile-link-num">01</span></a>
+      <a href="#catalog" class="mobile-link"><span>Shop All Pieces</span> <span class="mobile-link-num">02</span></a>
+      <a href="#categories" class="mobile-link"><span>Collections</span> <span class="mobile-link-num">03</span></a>
+      <a href="#new-arrivals" class="mobile-link"><span>New Arrivals</span> <span class="mobile-link-num">04</span></a>
+      <a href="#showcase-3d" class="mobile-link"><span>3D Atelier</span> <span class="mobile-link-num">05</span></a>
+      <a href="#about" class="mobile-link"><span>About Us</span> <span class="mobile-link-num">06</span></a>
+    </nav>
+    <div class="mobile-nav-footer">
+      <div class="mobile-contact-info">
+        <p>Private Concierge</p>
+        <p class="text-gold">+1 (800) 489-LUXE</p>
+        <p>atelier@luxe-interiors.com</p>
+      </div>
+      <div class="mobile-socials">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== HERO SECTION (FULL-SCREEN CAROUSEL) ==================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-carousel" id="hero-carousel">
+      
+      <div class="hero-slide active" data-slide-index="0">
+        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content-wrapper">
+          <div class="hero-content">
+            <div class="hero-subtitle">
+              <span class="hero-subtitle-bar"></span>
+              <span>PREMIUM MODERN FURNITURE</span>
+            </div>
+            <h1 class="hero-title">
+              Transform Your Space,<br>
+              <span class="serif-italic text-gold">Elevate Your Living.</span>
+            </h1>
+            <p class="hero-desc">
+              Discover timeless furniture designed to bring comfort, elegance, and beauty into every corner of your home. Hand-sculpted in our Milanese ateliers.
+            </p>
+            <div class="hero-buttons">
+              <a href="#catalog" class="btn btn-primary hero-nav-btn" data-category="all">Shop Collection</a>
+              <a href="#about" class="btn btn-outline">Explore More <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-slide-index="1">
+        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=2000&q=85');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content-wrapper">
+          <div class="hero-content">
+            <div class="hero-subtitle">
+              <span class="hero-subtitle-bar"></span>
+              <span>SCULPTURAL COMFORT</span>
+            </div>
+            <h2 class="hero-title">
+              The Art of Form &<br>
+              <span class="serif-italic text-gold">Velvet Bouclé Craft.</span>
+            </h2>
+            <p class="hero-desc">
+              Curved silhouettes tailored with cloud-like comfort and bespoke textured bouclé. Designed as the architectural focal point of your salon.
+            </p>
+            <div class="hero-buttons">
+              <a href="#catalog" class="btn btn-primary hero-nav-btn" data-category="living">View Seating</a>
+              <a href="#showcase-3d" class="btn btn-outline">3D Showcase <i class="fa-solid fa-cube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-slide-index="2">
+        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=2000&q=85');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content-wrapper">
+          <div class="hero-content">
+            <div class="hero-subtitle">
+              <span class="hero-subtitle-bar"></span>
+              <span>SANCTUARY OF REPOSE</span>
+            </div>
+            <h2 class="hero-title">
+              Serenity Defined by<br>
+              <span class="serif-italic text-gold">Minimalist Harmony.</span>
+            </h2>
+            <p class="hero-desc">
+              Floating Japanese oak platforms paired with breathable organic European linen to cultivate pure tranquility and refined nighttime indulgence.
+            </p>
+            <div class="hero-buttons">
+              <a href="#catalog" class="btn btn-primary hero-nav-btn" data-category="bedroom">Explore Bedroom</a>
+              <a href="#categories" class="btn btn-outline">All Suites <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-slide-index="3">
+        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=2000&q=85');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content-wrapper">
+          <div class="hero-content">
+            <div class="hero-subtitle">
+              <span class="hero-subtitle-bar"></span>
+              <span>EPICUREAN ELEGANCE</span>
+            </div>
+            <h2 class="hero-title">
+              Calacatta Marble &<br>
+              <span class="serif-italic text-gold">Bespoke Brass Details.</span>
+            </h2>
+            <p class="hero-desc">
+              Monolithic Italian marble statement tables engineered for unforgettable culinary gatherings, celebrations, and architectural grandeur.
+            </p>
+            <div class="hero-buttons">
+              <a href="#catalog" class="btn btn-primary hero-nav-btn" data-category="dining">Discover Dining</a>
+              <a href="#about" class="btn btn-outline">Our Atelier <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-slide-index="4">
+        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2000&q=85');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content-wrapper">
+          <div class="hero-content">
+            <div class="hero-subtitle">
+              <span class="hero-subtitle-bar"></span>
+              <span>PURE ARCHITECTURAL FORM</span>
+            </div>
+            <h2 class="hero-title">
+              Simplicity is the<br>
+              <span class="serif-italic text-gold">Ultimate Sophistication.</span>
+            </h2>
+            <p class="hero-desc">
+              Raw travertine, warm walnut accents, and brushed metal accents meticulously balanced to create harmonious, breathable living environments.
+            </p>
+            <div class="hero-buttons">
+              <a href="#catalog" class="btn btn-primary hero-nav-btn" data-category="accents">Shop Minimalist</a>
+              <a href="#new-arrivals" class="btn btn-outline">New Season <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hero Dots Indicators -->
+    <div class="hero-dots" id="hero-dots">
+      <div class="hero-dot active" data-index="0" aria-label="Go to slide 1"></div>
+      <div class="hero-dot" data-index="1" aria-label="Go to slide 2"></div>
+      <div class="hero-dot" data-index="2" aria-label="Go to slide 3"></div>
+      <div class="hero-dot" data-index="3" aria-label="Go to slide 4"></div>
+      <div class="hero-dot" data-index="4" aria-label="Go to slide 5"></div>
+    </div>
+
+    <!-- Hero Carousel Controls -->
+    <div class="hero-controls">
+      <div class="hero-pagination-number">
+        <span class="current" id="hero-curr-num">01</span>
+        <span class="divider">/</span>
+        <span class="total">05</span>
+      </div>
+      <div class="hero-arrows">
+        <button class="hero-arrow-btn" id="hero-prev-btn" aria-label="Previous Slide">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="hero-arrow-btn" id="hero-next-btn" aria-label="Next Slide">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Animated Slide Progress Bar -->
+    <div class="hero-progress-container">
+      <div class="hero-progress-bar" id="hero-progress-bar"></div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED CATEGORIES SECTION ==================== -->
+  <section class="section-padding categories-section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CURATED REALMS</span>
+        <h2 class="section-title">Explore Our Collections</h2>
+        <p class="section-desc">
+          Immerse yourself in distinctive categories designed to harmonize architectural flow and deliver unparalleled comfort.
+        </p>
+      </div>
+
+      <div class="categories-grid">
+        <div class="category-card cat-card-1" data-category="living">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80" alt="Luxury Living Room Furniture" class="category-img" loading="lazy">
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <div class="category-meta">
+              <span class="category-count">100 Pieces</span>
+              <h3 class="category-name">Living Room</h3>
+            </div>
+            <div class="category-action-icon"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <div class="category-card cat-card-2" data-category="bedroom">
+          <img src="https://images.unsplash.com/photo-1540518614846-7ede433c4ef0?auto=format&fit=crop&w=1200&q=80" alt="Luxury Bedroom Suites" class="category-img" loading="lazy">
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <div class="category-meta">
+              <span class="category-count">100 Pieces</span>
+              <h3 class="category-name">Bedroom</h3>
+            </div>
+            <div class="category-action-icon"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <div class="category-card cat-card-3" data-category="dining">
+          <img src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=1200&q=80" alt="Luxury Dining Furniture" class="category-img" loading="lazy">
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <div class="category-meta">
+              <span class="category-count">100 Pieces</span>
+              <h3 class="category-name">Dining</h3>
+            </div>
+            <div class="category-action-icon"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <div class="category-card cat-card-4" data-category="office">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80" alt="Executive Office Furniture" class="category-img" loading="lazy">
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <div class="category-meta">
+              <span class="category-count">100 Pieces</span>
+              <h3 class="category-name">Office</h3>
+            </div>
+            <div class="category-action-icon"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <div class="category-card cat-card-5" data-category="outdoor">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Luxury Outdoor Furniture" class="category-img" loading="lazy">
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <div class="category-meta">
+              <span class="category-count">100 Pieces</span>
+              <h3 class="category-name">Outdoor</h3>
+            </div>
+            <div class="category-action-icon"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <div class="category-card cat-card-6" data-category="accents">
+          <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1600&q=80" alt="Architectural Decor & Lighting" class="category-img" loading="lazy">
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <div class="category-meta">
+              <span class="category-count">100 Pieces</span>
+              <h3 class="category-name">Sculptural Decor & Lighting</h3>
+            </div>
+            <div class="category-action-icon"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED PRODUCTS SECTION ==================== -->
+  <section class="section-padding products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ICONIC MASTERPIECES</span>
+        <h2 class="section-title">Featured Creations</h2>
+        <p class="section-desc">
+          Click any piece to explore bespoke craftsmanship, curated architectural color harmonies, and client reviews.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" id="product-filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Highlights</button>
+        <button class="filter-btn" data-filter="living">Living</button>
+        <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+        <button class="filter-btn" data-filter="dining">Dining</button>
+        <button class="filter-btn" data-filter="accents">Accents</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="products-grid">
+
+        <article class="product-card" data-category="living" data-id="1">
+          <div class="product-img-wrap">
+            <span class="product-badge">Exclusive</span>
+            <div class="product-actions">
+              <button class="action-btn wishlist-toggle-btn" title="Add to Wishlist" data-id="1">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="action-btn quickview-trigger-btn" title="Inspect Details & Specs" data-id="1">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=80" alt="Milano Bouclé Curved Sofa" class="product-img" loading="lazy">
+            <button class="quick-add-btn add-to-cart-btn" data-id="1">
+              <i class="fa-solid fa-bag-shopping"></i> Add To Cart
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Living Room</span>
+            <h3 class="product-title">Milano Bouclé Curved Sofa</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(38 Reviews)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">NGN 6,800,000</span>
+              <span class="btn-text" style="font-size: 0.72rem;">View Piece Details →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="accents" data-id="2">
+          <div class="product-img-wrap">
+            <span class="product-badge">New Season</span>
+            <div class="product-actions">
+              <button class="action-btn wishlist-toggle-btn" title="Add to Wishlist" data-id="2">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="action-btn quickview-trigger-btn" title="Inspect Details & Specs" data-id="2">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&q=80" alt="Aurelia Travertine Coffee Table" class="product-img" loading="lazy">
+            <button class="quick-add-btn add-to-cart-btn" data-id="2">
+              <i class="fa-solid fa-bag-shopping"></i> Add To Cart
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Accents & Tables</span>
+            <h3 class="product-title">Aurelia Travertine Coffee Table</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(24 Reviews)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">NGN 3,024,000</span>
+              <span class="btn-text" style="font-size: 0.72rem;">Inspect 4 Angles →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bedroom" data-id="3">
+          <div class="product-img-wrap">
+            <span class="product-badge">Handcrafted</span>
+            <div class="product-actions">
+              <button class="action-btn wishlist-toggle-btn" title="Add to Wishlist" data-id="3">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="action-btn quickview-trigger-btn" title="Inspect Details & Specs" data-id="3">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80" alt="Kyoto Minimalist Platform Bed" class="product-img" loading="lazy">
+            <button class="quick-add-btn add-to-cart-btn" data-id="3">
+              <i class="fa-solid fa-bag-shopping"></i> Add To Cart
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Bedroom Suite</span>
+            <h3 class="product-title">Kyoto Minimalist Platform Bed</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(42 Reviews)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">NGN 5,440,000</span>
+              <span class="btn-text" style="font-size: 0.72rem;">Inspect 4 Angles →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="living" data-id="4">
+          <div class="product-img-wrap">
+            <span class="product-badge">Iconic</span>
+            <div class="product-actions">
+              <button class="action-btn wishlist-toggle-btn" title="Add to Wishlist" data-id="4">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="action-btn quickview-trigger-btn" title="Inspect Details & Specs" data-id="4">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1580481077195-c3a821a501e2?auto=format&fit=crop&w=1000&q=80" alt="Eos Sculptural Brass Lounge Chair" class="product-img" loading="lazy">
+            <button class="quick-add-btn add-to-cart-btn" data-id="4">
+              <i class="fa-solid fa-bag-shopping"></i> Add To Cart
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Living Room</span>
+            <h3 class="product-title">Eos Sculptural Lounge Chair</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(51 Reviews)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">NGN 3,440,000</span>
+              <span class="btn-text" style="font-size: 0.72rem;">Inspect 4 Angles →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="dining" data-id="5">
+          <div class="product-img-wrap">
+            <span class="product-badge">Bespoke</span>
+            <div class="product-actions">
+              <button class="action-btn wishlist-toggle-btn" title="Add to Wishlist" data-id="5">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="action-btn quickview-trigger-btn" title="Inspect Details & Specs" data-id="5">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=1000&q=80" alt="Calacatta Fluted Dining Table" class="product-img" loading="lazy">
+            <button class="quick-add-btn add-to-cart-btn" data-id="5">
+              <i class="fa-solid fa-bag-shopping"></i> Add To Cart
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Dining Suite</span>
+            <h3 class="product-title">Calacatta Fluted Dining Table</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(19 Reviews)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">NGN 8,960,000</span>
+              <span class="btn-text" style="font-size: 0.72rem;">Inspect 4 Angles →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="living" data-id="6">
+          <div class="product-img-wrap">
+            <span class="product-badge">Architectural</span>
+            <div class="product-actions">
+              <button class="action-btn wishlist-toggle-btn" title="Add to Wishlist" data-id="6">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="action-btn quickview-trigger-btn" title="Inspect Details & Specs" data-id="6">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&w=1000&q=80" alt="Zephyr Smoked Glass Bookshelf" class="product-img" loading="lazy">
+            <button class="quick-add-btn add-to-cart-btn" data-id="6">
+              <i class="fa-solid fa-bag-shopping"></i> Add To Cart
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Storage & Library</span>
+            <h3 class="product-title">Zephyr Smoked Glass Bookshelf</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(28 Reviews)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">NGN 4,448,000</span>
+              <span class="btn-text" style="font-size: 0.72rem;">Inspect 4 Angles →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="dining" data-id="7">
+          <div class="product-img-wrap">
+            <span class="product-badge">Italian Craft</span>
+            <div class="product-actions">
+              <button class="action-btn wishlist-toggle-btn" title="Add to Wishlist" data-id="7">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="action-btn quickview-trigger-btn" title="Inspect Details & Specs" data-id="7">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=1000&q=80" alt="Solstice Walnut Sideboard" class="product-img" loading="lazy">
+            <button class="quick-add-btn add-to-cart-btn" data-id="7">
+              <i class="fa-solid fa-bag-shopping"></i> Add To Cart
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Cabinetry</span>
+            <h3 class="product-title">Solstice Walnut Sideboard</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(33 Reviews)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">NGN 4,960,000</span>
+              <span class="btn-text" style="font-size: 0.72rem;">Inspect 4 Angles →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="accents" data-id="8">
+          <div class="product-img-wrap">
+            <span class="product-badge">Ambient Luminary</span>
+            <div class="product-actions">
+              <button class="action-btn wishlist-toggle-btn" title="Add to Wishlist" data-id="8">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="action-btn quickview-trigger-btn" title="Inspect Details & Specs" data-id="8">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=80" alt="Vesper Matte Black Floor Lamp" class="product-img" loading="lazy">
+            <button class="quick-add-btn add-to-cart-btn" data-id="8">
+              <i class="fa-solid fa-bag-shopping"></i> Add To Cart
+            </button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Lighting & Decor</span>
+            <h3 class="product-title">Vesper Matte Black Floor Lamp</h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(47 Reviews)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="product-price">NGN 1,424,000</span>
+              <span class="btn-text" style="font-size: 0.72rem;">Inspect 4 Angles →</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Link to Complete Catalog -->
+      <div class="catalog-cta-wrap">
+        <a href="#catalog" class="btn btn-outline" style="padding: 1.2rem 3rem;">
+          View Complete Atelier Catalog (700 Pieces) <i class="fa-solid fa-arrow-down-long"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXPANDED ATELIER CATALOG SECTION ==================== -->
+  <section class="section-padding catalog-section" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">COMPLETE CURATION</span>
+        <h2 class="section-title">The Atelier Catalog</h2>
+        <p class="section-desc">
+          Explore our expansive archives. Filter by spatial typology or sort by investment value and architectural acclaim.
+        </p>
+      </div>
+
+      <!-- Catalog Filter Tabs & Sorting Toolbar -->
+      <div class="catalog-toolbar">
+        <div class="filter-tabs" style="margin-bottom: 0;">
+          <button class="filter-btn catalog-filter-btn active" data-filter="all">All (700)</button>
+          <button class="filter-btn catalog-filter-btn" data-filter="living">Living</button>
+          <button class="filter-btn catalog-filter-btn" data-filter="bedroom">Bedroom</button>
+          <button class="filter-btn catalog-filter-btn" data-filter="dining">Dining</button>
+          <button class="filter-btn catalog-filter-btn" data-filter="office">Office</button>
+          <button class="filter-btn catalog-filter-btn" data-filter="outdoor">Outdoor</button>
+          <button class="filter-btn catalog-filter-btn" data-filter="accents">Accents & Lighting</button>
+        </div>
+
+        <div class="catalog-controls">
+          <div class="catalog-count-label" id="catalog-results-count">
+            Showing 700 of 700 Curated Masterpieces
+          </div>
+          <select class="catalog-sort-select" id="catalog-sort-select" aria-label="Sort products">
+            <option value="featured">Sort: Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Highest Acclaim (Rating)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Dynamic Catalog Grid -->
+      <div class="products-grid" id="catalog-grid"></div>
+      <div class="catalog-load-more-wrap">
+        <button class="btn btn-outline" id="catalog-load-more-btn" type="button">
+          Load More Pieces <i class="fa-solid fa-arrow-down"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE 3D FURNITURE SHOWCASE ==================== -->
+  <section class="section-padding showcase-3d-section" id="showcase-3d">
+    <div class="container">
+      <div class="showcase-3d-container">
+        <!-- 3D Canvas Viewport -->
+        <div class="canvas-viewport-wrapper">
+          <span class="canvas-badge">
+            <span class="pulse-circle"></span> Real-Time 3D Atelier
+          </span>
+          <div class="canvas-interaction-hint">
+            <i class="fa-solid fa-arrows-rotate"></i> Drag to inspect 360°
+          </div>
+
+          <div class="canvas-hotspots-container">
+            <div class="hotspot-pin" style="top: 35%; left: 45%;">
+              <div class="hotspot-dot"></div>
+              <div class="hotspot-tooltip">
+                <div class="hotspot-tooltip-title">Ergonomic Contour</div>
+                <div class="hotspot-tooltip-text">Anatomically molded cold-cure foam core encased in Belgian feather padding.</div>
+              </div>
+            </div>
+            <div class="hotspot-pin" style="top: 55%; left: 35%;">
+              <div class="hotspot-dot"></div>
+              <div class="hotspot-tooltip">
+                <div class="hotspot-tooltip-title">Artisanal Stitching</div>
+                <div class="hotspot-tooltip-text">Double saddle-stitched by master leather artisans in Florence, Italy.</div>
+              </div>
+            </div>
+            <div class="hotspot-pin" style="top: 75%; left: 62%;">
+              <div class="hotspot-dot"></div>
+              <div class="hotspot-tooltip">
+                <div class="hotspot-tooltip-title">Brushed Brass Base</div>
+                <div class="hotspot-tooltip-text">Solid cast brass with hand-applied satin oxidation and protective wax seal.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Three.js Canvas Container -->
+          <div id="threejs-canvas"></div>
+        </div>
+
+        <!-- 3D Information Column -->
+        <div class="showcase-info-col">
+          <span class="showcase-tag">BESPOKE INTERACTIVE EXPERIENCE</span>
+          <h2 class="showcase-title">The Aurelius Sculptural Lounge Chair</h2>
+          <div class="showcase-price">NGN 3,920,000</div>
+          <p class="showcase-desc">
+            An iconic study in balance, silhouette, and artisanal materiality. The Aurelius chair unites ergonomic perfection with architectural poise, serving as both sculpture and sanctuary.
+          </p>
+
+          <!-- Real-Time Material & Color Switcher -->
+          <div class="material-selector-wrap">
+            <div class="selector-label">
+              <span>Select Material Finish:</span>
+              <span class="active-material-name" id="selected-material-label">Cognac Full-Grain Leather</span>
+            </div>
+            <div class="color-swatches">
+              <button class="swatch-btn active" data-color="0x8B4513" data-name="Cognac Full-Grain Leather" aria-label="Cognac Leather">
+                <div class="swatch-inner" style="background: linear-gradient(135deg, #A0522D, #703311);"></div>
+              </button>
+              <button class="swatch-btn" data-color="0x1B382B" data-name="Royal Forest Velvet" aria-label="Royal Forest Velvet">
+                <div class="swatch-inner" style="background: linear-gradient(135deg, #244b3a, #11241c);"></div>
+              </button>
+              <button class="swatch-btn" data-color="0xEAE6DF" data-name="Ivory Wool Bouclé" aria-label="Ivory Wool Bouclé">
+                <div class="swatch-inner" style="background: linear-gradient(135deg, #F5F1EA, #D5CFB9);"></div>
+              </button>
+              <button class="swatch-btn" data-color="0x1C1C1C" data-name="Midnight Obsidian" aria-label="Midnight Obsidian">
+                <div class="swatch-inner" style="background: linear-gradient(135deg, #2D2D2D, #0F0F0F);"></div>
+              </button>
+            </div>
+          </div>
+
+          <div class="showcase-specs-grid">
+            <div class="spec-box">
+              <div class="spec-title">Dimensions</div>
+              <div class="spec-val">84W × 78D × 72H cm</div>
+            </div>
+            <div class="spec-box">
+              <div class="spec-title">Designer</div>
+              <div class="spec-val">Studio Matteo V., Milan</div>
+                <a href="#catalog" class="footer-link footer-nav-cat" data-category="all">All Masterpieces (700)</a>
+            <div class="spec-box">
+              <div class="spec-title">Craftsmanship</div>
+              <div class="spec-val">Handmade in Lombardy</div>
+            </div>
+            <div class="spec-box">
+              <div class="spec-title">Lead Time</div>
+              <div class="spec-val">Made to Order (3-4 wks)</div>
+            </div>
+          </div>
+
+          <div class="showcase-actions">
+            <button class="btn btn-primary add-to-cart-btn" data-id="4">
+              <i class="fa-solid fa-bag-shopping"></i> Order Bespoke
+            </button>
+            <button class="btn btn-outline quickview-trigger-btn" data-id="4">
+              Detailed Dossier
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW ARRIVALS HORIZONTAL CAROUSEL ==================== -->
+  <section class="section-padding arrivals-section" id="new-arrivals">
+    <div class="container">
+      <div class="arrivals-header-row">
+        <div>
+          <span class="section-tag">SPRING / SUMMER EDITION</span>
+          <h2 class="section-title">New Arrivals</h2>
+        </div>
+        <div class="arrivals-arrows">
+          <button class="swiper-nav-btn arrivals-prev" aria-label="Previous arrivals">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="swiper-nav-btn arrivals-next" aria-label="Next arrivals">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="swiper arrivals-slider">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide arrival-card" data-id="9">
+            <div class="arrival-img-box">
+              <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1000&q=80" alt="Ravello Leather Armchair" loading="lazy">
+            </div>
+            <div class="arrival-info">
+              <h3 class="arrival-title">Ravello Leather Armchair</h3>
+              <div class="arrival-price">NGN 3,120,000</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide arrival-card" data-id="10">
+            <div class="arrival-img-box">
+              <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1000&q=80" alt="Siena Fluted Oak Credenza" loading="lazy">
+            </div>
+            <div class="arrival-info">
+              <h3 class="arrival-title">Siena Fluted Oak Credenza</h3>
+              <div class="arrival-price">NGN 6,160,000</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide arrival-card" data-id="11">
+            <div class="arrival-img-box">
+              <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1000&q=80" alt="Bellagio Brushed Brass Chandelier" loading="lazy">
+            </div>
+            <div class="arrival-info">
+              <h3 class="arrival-title">Bellagio Brushed Brass Chandelier</h3>
+              <div class="arrival-price">NGN 3,680,000</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide arrival-card" data-id="12">
+            <div class="arrival-img-box">
+              <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=80" alt="Verona Low Marble Table" loading="lazy">
+            </div>
+            <div class="arrival-info">
+              <h3 class="arrival-title">Verona Low Marble Coffee Table</h3>
+              <div class="arrival-price">NGN 2,752,000</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide arrival-card" data-id="13">
+            <div class="arrival-img-box">
+              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80" alt="Como Ergonomic Velvet Chaise" loading="lazy">
+            </div>
+            <div class="arrival-info">
+              <h3 class="arrival-title">Como Ergonomic Velvet Chaise</h3>
+              <div class="arrival-price">NGN 4,304,000</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CINEMATIC LUXURY PARALLAX BANNER ==================== -->
+  <section class="parallax-banner" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85');">
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content">
+      <span class="banner-tag">SIGNATURE PHILOSOPHY</span>
+      <h2 class="banner-title">Curated For Exceptional Living.</h2>
+      <p class="banner-desc">
+        Furniture designed to transform your home into a space of comfort, beauty, and timeless inspiration. Handcrafted for generations of appreciation.
+      </p>
+      <div class="banner-buttons">
+        <a href="#catalog" class="btn btn-primary">Explore Collection</a>
+        <a href="#about" class="btn btn-outline">Our Atelier Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT & CRAFTSMANSHIP SECTION ==================== -->
+  <section class="section-padding about-section" id="about">
+    <div class="container">
+      <div class="about-split-grid">
+        <div class="about-images-col">
+          <div class="about-main-img-box">
+            <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1200&q=85" alt="Architectural Italian Interior" loading="lazy">
+          </div>
+          <div class="about-floating-card">
+            <img src="https://images.unsplash.com/photo-1581539250439-c96689b516dd?auto=format&fit=crop&w=600&q=80" alt="Handcrafted joinery close up" class="floating-img" loading="lazy">
+            <div class="floating-badge">
+              <span class="heritage-year">1988</span>
+              <span class="heritage-label">Milanese Ateliers & Craftsmanship</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content-col">
+          <span class="section-tag">HERITAGE & MASTERY</span>
+          <h2 class="section-title">Crafting Spaces<br><span class="serif-italic text-gold">You’ll Love Forever.</span></h2>
+          <p class="about-story">
+            Founded with an uncompromising devotion to architectural clarity, LUXE. fuses traditional hand-joinery with cutting-edge parametric design. Every creation is born from slow craftsmanship, honoring the natural grain of sustainably harvested European timber and the tactile richness of Italian top-grain leathers.
+          </p>
+          <p class="about-story">
+            We believe an environment is not merely inhabited; it is felt. Our bespoke pieces serve as functional art, bringing emotional resonance, warmth, and enduring luxury to discerning private residences worldwide.
+          </p>
+          <div class="founder-note">
+            <span class="section-tag">THE FOUNDER</span>
+            <h3>Amara Okafor, Founder & Creative Director</h3>
+            <p>Amara founded LUXE. after two decades studying furniture, architecture, and material culture across Lagos, Milan, and London. Her Nigerian heritage and European atelier training shape every collection: warm, expressive pieces with rigorous proportions, honest materials, and a deep respect for the way people gather at home. From our Lagos studio, she leads a design team committed to making collectible furniture feel personal, livable, and enduring.</p>
+          </div>
+
+          <div class="about-stats-grid">
+            <div class="stat-item">
+              <div class="stat-num" data-target="36">35+</div>
+              <div class="stat-label">Years of Mastery</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" data-target="100">100%</div>
+              <div class="stat-label">Sustainably Sourced</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" data-target="44">40+</div>
+              <div class="stat-label">Global Design Awards</div>
+            </div>
+          </div>
+
+          <a href="#catalog" class="btn-text">
+            Learn More About Our Ateliers <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS SECTION ==================== -->
+  <section class="section-padding testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">WORDS OF RECOGNITION</span>
+        <h2 class="section-title">Voices of Discernment</h2>
+        <p class="section-desc">
+          Reflections from world-renowned interior architects, design critics, and visionary homeowners.
+        </p>
+      </div>
+
+      <div class="swiper testimonial-slider">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-icon">“</div>
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                “LUXE. creates more than furniture—they create an architectural dialogue with the surrounding space. The Milano Bouclé sofa transformed our client's penthouse salon into a sanctuary of understated magnificence.”
+              </p>
+              <div class="testimonial-client">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Elena Rostova" class="client-avatar" loading="lazy">
+                <div>
+                  <div class="client-name">Elena Rostova</div>
+                  <div class="client-role">Principal Architect, Studio V Architectural Group</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-icon">“</div>
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                “The precision of the Calacatta marble joinery and tactile warmth of the leather seating is unparalleled. When furnishing high-concept villas, LUXE. is my first and only recommendation.”
+              </p>
+              <div class="testimonial-client">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Julian Vance" class="client-avatar" loading="lazy">
+                <div>
+                  <div class="client-name">Julian Vance</div>
+                  <div class="client-role">Design Director, Milan Interior Review</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-icon">“</div>
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                “From bespoke custom dimension consultations to white-glove delivery, the experience was as luxurious as the furniture itself. Every guest who enters our home immediately compliments the Aurelia table.”
+              </p>
+              <div class="testimonial-client">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Sophia Laurent" class="client-avatar" loading="lazy">
+                <div>
+                  <div class="client-name">Sophia Laurent</div>
+                  <div class="client-role">Private Residence, Paris 8th Arrondissement</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="testimonials-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEWSLETTER & CONCIERGE ==================== -->
+  <section class="section-padding newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-card">
+        <span class="section-tag">PRIVATE INVITATION</span>
+        <h2 class="section-title">Stay Inspired.</h2>
+        <p class="section-desc">
+          Subscribe to receive exclusive collection debuts, interior inspiration dossiers, and private viewing invitations.
+        </p>
+        
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Enter your private email address..." required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+
+        <div class="perks-row">
+          <div class="perk-item">
+            <i class="fa-solid fa-truck-ramp-box"></i> White Glove Delivery
+          </div>
+          <div class="perk-item">
+            <i class="fa-solid fa-compass-drafting"></i> Complimentary Design Consultation
+          </div>
+          <div class="perk-item">
+            <i class="fa-solid fa-shield-halved"></i> 10-Year Master Warranty
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LUXURY FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a href="#hero" class="footer-logo">LUXE<span class="text-gold">.</span></a>
+          <p class="footer-tagline">
+            Pioneering architectural luxury furniture, lighting, and interior objects. Crafted in Italy for exceptional global residences.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <div class="footer-links">
+            <a href="#about" class="footer-link">About Us</a>
+            <a href="#about" class="footer-link">Our Heritage</a>
+            <a href="#catalog" class="footer-link">Atelier Catalog</a>
+            <a href="#" class="footer-link">Sustainability</a>
+            <a href="#" class="footer-link">Careers</a>
+            <a href="#" class="footer-link">Journal & Press</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Collections</h4>
+          <div class="footer-links">
+            <a href="#catalog" class="footer-link footer-nav-cat" data-category="all">All Masterpieces (700)</a>
+            <a href="#catalog" class="footer-link footer-nav-cat" data-category="living">Living Room</a>
+            <a href="#catalog" class="footer-link footer-nav-cat" data-category="bedroom">Bedroom Suites</a>
+            <a href="#catalog" class="footer-link footer-nav-cat" data-category="dining">Dining & Monoliths</a>
+            <a href="#catalog" class="footer-link footer-nav-cat" data-category="office">Executive Office</a>
+            <a href="#catalog" class="footer-link footer-nav-cat" data-category="outdoor">Outdoor Living</a>
+            <a href="#catalog" class="footer-link footer-nav-cat" data-category="accents">Sculptural Accents</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Global Ateliers</h4>
+          <div class="showroom-list">
+            <div class="showroom-item">
+              <span class="showroom-city">Lagos, Nigeria</span>
+              <span class="showroom-address">14A Akin Adesola Street, Victoria Island, Lagos</span>
+            </div>
+            <div class="showroom-item">
+              <span class="showroom-city">Abuja, Nigeria</span>
+              <span class="showroom-address">22 Agadez Crescent, Wuse 2, Abuja</span>
+            </div>
+            <div class="showroom-item">
+              <span class="showroom-city">Milan</span>
+              <span class="showroom-address">Via Montenapoleone 18, 20121 Milano MI</span>
+            </div>
+            <div class="showroom-item">
+              <span class="showroom-city">Paris</span>
+              <span class="showroom-address">42 Rue du Faubourg Saint-Honoré, 75008 Paris</span>
+            </div>
+            <div class="showroom-item">
+              <span class="showroom-city">New York</span>
+              <span class="showroom-address">450 West 14th St, Meatpacking, NY 10014</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2026 LUXE. Interiors S.p.A. All rights reserved. Designed for Architectural Excellence.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Cookie Preferences</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SLIDE-OUT CART DRAWER WITH PAYMENT PLANS ==================== -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Cart (<span id="cart-items-count">2</span>)</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-shipping-bar-wrap">
+      <div class="cart-shipping-text" id="shipping-progress-text">
+        Complimentary White-Glove Delivery unlocked!
+      </div>
+      <div class="cart-shipping-progress">
+        <div class="cart-shipping-bar" id="cart-shipping-bar" style="width: 100%;"></div>
+      </div>
+    </div>
+
+    <!-- Items List -->
+    <div class="cart-items-container" id="cart-items-container"></div>
+
+    <!-- Flexible Payment Plan Options in Cart -->
+    <div class="cart-payment-plans">
+      <div class="plans-title">
+        <span><i class="fa-solid fa-shield-halved text-gold"></i> Flexible Payment Plans</span>
+        <span style="font-size: 0.65rem; color: #44c96e; text-transform: uppercase;">0% APR Guaranteed</span>
+      </div>
+      <div class="plan-options-grid" id="cart-payment-plans-list">
+        <!-- Injected via script.js -->
+      </div>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Estimated White-Glove Shipping</span>
+        <span class="text-gold">COMPLIMENTARY</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Estimated Subtotal</span>
+        <span id="cart-subtotal-price">NGN 9,824,000</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" id="checkout-open-modal-btn">
+        Proceed To Secure Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== PRODUCT DOSSIER MODAL WITH GALLERY & COLOR SUGGESTIONS ==================== -->
+  <div class="modal-overlay" id="product-modal-overlay">
+    <div class="product-dossier-modal" id="product-dossier-modal">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close product dossier">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Left Column: Curated Photography Gallery -->
+      <div class="dossier-gallery-col">
+        <div class="dossier-main-img-wrap">
+          <span class="gallery-badge" id="dossier-gallery-badge">Master Perspective</span>
+          <img src="" alt="Product View" class="dossier-main-img" id="dossier-main-img">
+        </div>
+        
+        <!-- Curated Photography Thumbnails Reel -->
+        <div class="dossier-thumbnails-reel" id="dossier-thumbnails-reel">
+          <!-- Injected dynamically via script.js -->
+        </div>
+      </div>
+
+      <!-- Right Column: Product Dossier Details & Tabs -->
+      <div class="dossier-details-col">
+        <div class="dossier-tag-row">
+          <span class="dossier-category" id="dossier-category">LIVING ROOM</span>
+          <span class="dossier-lead-badge" id="dossier-lead-badge"><i class="fa-solid fa-circle"></i> In Stock</span>
+        </div>
+
+        <h2 class="dossier-title" id="dossier-title">Product Title</h2>
+
+        <div class="dossier-rating-row">
+          <div class="dossier-stars" id="dossier-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <span class="dossier-review-link" id="dossier-review-link">(38 Verified Reviews)</span>
+        </div>
+
+        <div class="dossier-price-row">
+          <span class="dossier-price" id="dossier-price">NGN 0</span>
+          <span class="dossier-shipping-note">Includes White-Glove In-Room Delivery & Setup</span>
+        </div>
+
+        <!-- Dossier Navigation Tabs -->
+        <div class="dossier-tabs-nav">
+          <button class="dossier-tab-btn active" data-tab="overview">Overview & Palettes</button>
+          <button class="dossier-tab-btn" data-tab="specs">Specifications ("side & ma")</button>
+          <button class="dossier-tab-btn" data-tab="reviews">Client Reviews</button>
+        </div>
+
+        <!-- Tab 1: Overview & Color Suggestions -->
+        <div class="dossier-tab-panel active" id="tab-overview">
+          <p class="dossier-desc" id="dossier-desc">
+            Product narrative description.
+          </p>
+          
+          <!-- Color Finishes Switcher -->
+          <div class="dossier-swatches-wrap">
+            <div class="dossier-swatch-label">
+              <span>Select Color Finish:</span>
+              <span id="dossier-active-color-name">Cognac Tuscan Leather</span>
+            </div>
+            <div class="color-swatches" id="dossier-swatches-list">
+              <!-- Injected via script.js -->
+            </div>
+          </div>
+
+          <!-- Curated Interior Palette & Color Suggestions -->
+          <div class="palette-harmony-container" id="palette-harmony-container">
+            <div class="harmony-header">
+              <i class="fa-solid fa-palette"></i> Architectural Color Harmony & Material Pairing
+            </div>
+            <p class="harmony-text" id="harmony-description-text">
+              Curated styling suggestions from our Milan studio for this finish.
+            </p>
+            <div class="harmony-chips" id="harmony-chips-list">
+              <!-- Injected via script.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Technical Specifications & Side Dimensions ("side and ma") -->
+        <div class="dossier-tab-panel" id="tab-specs">
+          <table class="specs-table" id="dossier-specs-table"></table>
+          <div class="materials-highlight-box">
+            <div class="materials-box-title"><i class="fa-solid fa-gem"></i> Artisanal Materials & Craftsmanship</div>
+            <div class="materials-box-text" id="dossier-materials-text">
+              Solid European timber frame, Italian full-grain leather, Calacatta marble, and brushed champagne brass.
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Customer Reviews & Rating Breakdown -->
+        <div class="dossier-tab-panel" id="tab-reviews">
+          <div class="reviews-summary-card">
+            <div>
+              <div class="score-big" id="dossier-score-big">5.0</div>
+              <div style="font-size: 0.75rem; color: #e5b95a; margin-top: 0.2rem;">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="rating-bars">
+              <div class="rating-bar-row">
+                <span>5 Star</span>
+                <div class="rating-progress-track"><div class="rating-progress-fill" style="width: 92%;"></div></div>
+                <span>92%</span>
+              </div>
+              <div class="rating-bar-row">
+                <span>4 Star</span>
+                <div class="rating-progress-track"><div class="rating-progress-fill" style="width: 8%;"></div></div>
+                <span>8%</span>
+              </div>
+              <div class="rating-bar-row">
+                <span>3 Star</span>
+                <div class="rating-progress-track"><div class="rating-progress-fill" style="width: 0%;"></div></div>
+                <span>0%</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <span style="font-size: 0.8rem; color: var(--text-muted);" id="dossier-review-count-label">Verified Architectural Reviews</span>
+            <button class="btn-text" id="write-review-btn" style="font-size: 0.72rem;"><i class="fa-solid fa-pen-nib"></i> Write A Review</button>
+          </div>
+
+          <div class="reviews-list" id="dossier-reviews-list"></div>
+        </div>
+
+        <!-- Purchase & Actions Footer -->
+        <div class="dossier-actions-bar">
+          <div class="dossier-qty-box">
+            <button class="dossier-qty-btn" id="dossier-qty-dec" aria-label="Decrease quantity">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <span class="dossier-qty-val" id="dossier-qty-val">1</span>
+            <button class="dossier-qty-btn" id="dossier-qty-inc" aria-label="Increase quantity">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+          <button class="btn btn-primary dossier-add-btn" id="dossier-add-btn">
+            <i class="fa-solid fa-bag-shopping"></i> Add To Cart
+          </button>
+          <button class="dossier-wishlist-btn" id="dossier-wishlist-btn" title="Add to Wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CLIENT AUTH MODAL (SIGN IN / SIGN UP / GOOGLE AUTH) ==================== -->
+  <div class="modal-overlay" id="auth-modal-overlay">
+    <div class="auth-modal-card" id="auth-modal-card">
+      <button class="modal-close-btn" id="auth-close-btn" aria-label="Close login">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="auth-header">
+        <div class="brand-logo" style="justify-content: center; font-size: 1.8rem; margin-bottom: 0.4rem;">
+          LUXE<span class="dot">.</span>
+        </div>
+        <h3 class="auth-title" id="auth-modal-title">Private Atelier Portal</h3>
+        <p class="auth-subtitle" id="auth-modal-subtitle">Access exclusive commissions, saved wishlists, and concierge care.</p>
+      </div>
+
+      <!-- Auth Switcher Tabs -->
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" id="tab-signin-btn">Sign In</button>
+        <button class="auth-tab-btn" id="tab-signup-btn">Join Atelier</button>
+      </div>
+
+      <!-- Google Authentication Button -->
+      <button class="google-auth-btn" id="google-auth-trigger-btn" type="button">
+        <svg class="google-icon-svg" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+        </svg>
+        <span>Continue with Google</span>
+      </button>
+
+      <div class="auth-divider">Or With Private Credentials</div>
+
+      <!-- Sign In Form -->
+      <form class="auth-form" id="signin-form">
+        <div class="auth-field-group">
+          <label class="auth-label">Private Email Address</label>
+          <input type="email" class="auth-input" id="signin-email" placeholder="client@private-residence.com" required>
+        </div>
+        <div class="auth-field-group">
+          <label class="auth-label">Password</label>
+          <input type="password" class="auth-input" id="signin-password" placeholder="••••••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+          Sign In to Atelier
+        </button>
+      </form>
+
+      <!-- Sign Up Form -->
+      <form class="auth-form" id="signup-form" style="display: none;">
+        <div class="auth-field-group">
+          <label class="auth-label">Full Name / Title</label>
+          <input type="text" class="auth-input" id="signup-name" placeholder="Lord / Lady / Architect Julian Sterling" required>
+        </div>
+        <div class="auth-field-group">
+          <label class="auth-label">Private Email Address</label>
+          <input type="email" class="auth-input" id="signup-email" placeholder="julian@sterling-estates.com" required>
+        </div>
+        <div class="auth-field-group">
+          <label class="auth-label">Home / Delivery Address</label>
+          <input type="text" class="auth-input" id="signup-address" placeholder="Your home or delivery address">
+        </div>
+        <div class="auth-field-group">
+          <label class="auth-label">Create Password</label>
+          <input type="password" class="auth-input" id="signup-password" placeholder="••••••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+          Create Atelier VIP Account
+        </button>
+      </form>
+      <form class="auth-form" id="verification-form" style="display: none;">
+        <div class="auth-field-group">
+          <label class="auth-label" for="verification-code">Verification code</label>
+          <input type="text" class="auth-input" id="verification-code" inputmode="numeric" maxlength="6" placeholder="Enter the 6-digit code" required>
+        </div>
+        <p class="auth-subtitle" id="verification-note">We sent a code to your email inbox.</p>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Verify Email & Open Account</button>
+        <button type="button" class="btn btn-outline" id="verification-resend-btn" style="width: 100%; margin-top: 0.6rem;">Send Another Code</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== CHECKOUT CONFIRMATION MODAL WITH PAYMENT SCHEDULE ==================== -->
+  <div class="modal-overlay" id="checkout-modal-overlay">
+    <div class="checkout-modal-card">
+      <button class="modal-close-btn" id="checkout-close-btn" aria-label="Close checkout">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="section-tag">BESPOKE ORDER FINALIZATION</div>
+      <h3 class="auth-title">White-Glove Private Order</h3>
+      <p class="auth-subtitle">Review your investment schedule and delivery preferences.</p>
+
+      <div class="checkout-summary-box">
+        <div class="checkout-row">
+          <span>Selected Payment Structure</span>
+          <span class="text-gold" id="checkout-plan-label" style="font-weight: 600;">4 Split Installments</span>
+        </div>
+        <div class="checkout-row">
+          <span>Payment Schedule</span>
+          <span id="checkout-installments-text">4 payments of NGN 2,459,000 every 2 weeks</span>
+        </div>
+        <div class="checkout-row">
+          <span>White-Glove In-Room Service</span>
+          <span style="color: #44c96e; font-weight: 600;">COMPLIMENTARY</span>
+        </div>
+        <div class="checkout-row">
+          <span>Estimated Atelier Arrival</span>
+          <span id="checkout-delivery-estimate">Within 3-5 Business Days</span>
+        </div>
+        <div class="checkout-row total">
+          <span>Total Investment</span>
+          <span id="checkout-total-price">NGN 9,824,000</span>
+        </div>
+      </div>
+
+      <div class="auth-field-group" style="margin-bottom: 1.5rem;">
+        <label class="auth-label">White-Glove Delivery Residence</label>
+        <input type="text" class="auth-input" id="checkout-address" value="14A Akin Adesola Street, Victoria Island, Lagos" required>
+      </div>
+      <div class="checkout-form-grid">
+        <div class="auth-field-group">
+          <label class="auth-label" for="checkout-state">Nigerian state</label>
+          <select class="auth-input" id="checkout-state" required>
+            <option value="Lagos">Lagos</option>
+            <option value="FCT">Federal Capital Territory</option>
+            <option value="Rivers">Rivers</option>
+            <option value="Oyo">Oyo</option>
+            <option value="Enugu">Enugu</option>
+            <option value="Other">Other Nigerian state</option>
+          </select>
+        </div>
+        <div class="auth-field-group">
+          <label class="auth-label" for="checkout-phone">Nigerian phone number</label>
+          <input type="tel" class="auth-input" id="checkout-phone" placeholder="080 0000 0000" value="0803 123 4567" required>
+        </div>
+      </div>
+      <div class="auth-field-group" style="margin-bottom: 1.25rem;">
+        <label class="auth-label" for="checkout-email">VIP Client Email (For Paystack Receipt & Atelier Tracking)</label>
+        <input type="email" class="auth-input" id="checkout-email" placeholder="client@luxedesign.ng" value="vip.collector@luxe.ng" required>
+      </div>
+      <div class="payment-method-panel">
+        <div class="auth-label">Payment Gateway</div>
+        <div class="payment-method-options">
+          <label><input type="radio" name="payment-method" value="paystack" checked> <i class="fa-solid fa-bolt text-gold"></i> Paystack Test Gateway (Card, Bank Transfer, USSD)</label>
+          <label><input type="radio" name="payment-method" value="concierge"> <i class="fa-solid fa-building-columns"></i> Atelier Private Wire</label>
+        </div>
+        <div class="checkout-form-grid" id="card-payment-fields" style="display: none;">
+          <input type="text" class="auth-input" id="card-number" inputmode="numeric" placeholder="Card number" autocomplete="cc-number">
+          <input type="text" class="auth-input" id="card-name" placeholder="Name on card" autocomplete="cc-name">
+          <input type="text" class="auth-input" id="card-expiry" placeholder="MM/YY" autocomplete="cc-exp">
+          <input type="text" class="auth-input" id="card-cvv" inputmode="numeric" placeholder="CVV" autocomplete="cc-csc">
+        </div>
+        <p class="payment-security-note"><i class="fa-solid fa-shield-halved text-gold"></i> Demo mode: Paystack opens its secure test checkout. Use Paystack test credentials; no live charge is made.</p>
+      </div>
+
+      <button class="btn btn-primary" id="confirm-order-action-btn" style="width: 100%;">
+        <i class="fa-solid fa-lock" style="margin-right: 0.5rem;"></i> Pay with Paystack Gateway
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="tracking-modal-overlay">
+    <div class="auth-modal-card tracking-modal-card">
+      <button class="modal-close-btn" id="tracking-close-btn" aria-label="Close order tracking"><i class="fa-solid fa-xmark"></i></button>
+      <div class="section-tag">CLIENT ORDER CARE</div>
+      <h3 class="auth-title">Track Your LUXE. Delivery</h3>
+      <p class="auth-subtitle">Enter your order reference to view its latest Nigeria delivery milestone.</p>
+      <form class="auth-form" id="tracking-form">
+        <input class="auth-input" id="tracking-reference" placeholder="Example: LUXE-NG-2026-001" required>
+        <button class="btn btn-primary" type="submit">Track Order</button>
+      </form>
+      <div id="tracking-result" class="tracking-result" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="wishlist-modal-overlay">
+    <div class="wishlist-modal-card">
+      <button class="modal-close-btn" id="wishlist-close-btn" aria-label="Close wishlist"><i class="fa-solid fa-xmark"></i></button>
+      <div class="section-tag">PRIVATE CURATION</div>
+      <h3 class="auth-title">Saved Pieces</h3>
+      <p class="auth-subtitle">Keep your considered pieces close, then open any item for its full dossier.</p>
+      <div id="wishlist-items" class="wishlist-items" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <!-- ==================== QUICK SEARCH OVERLAY ==================== -->
+  <div class="search-modal-overlay" id="search-modal-overlay">
+    <div class="search-modal-container">
+      <button class="search-close-btn" id="search-close-btn" aria-label="Close search">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="search-input-wrap">
+        <input type="text" class="search-main-input" id="search-main-input" placeholder="Search furniture, sofas, tables, marble..." autofocus>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="search-results-list" id="search-results-list"></div>
+    </div>
+  </div>
+
+  <!-- ==================== TOAST NOTIFICATIONS ==================== -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ==================== SCRIPTS & LIBRARIES ==================== -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <!-- Paystack Inline Popup SDK -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script>window.LUXE_PAYSTACK_KEY = '';</script>
+
+  <!-- Main Website Script -->
+  <script src="script.js"></script>
+</body>
+</html>
